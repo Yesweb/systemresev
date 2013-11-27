@@ -1,0 +1,86 @@
+body {
+	font-family:Calibri, Arial;
+	color:#094a93;
+	margin-top: 0px;
+	scrollbar-face-color: #d7d7d7;
+}
+::-webkit-scrollbar {
+	  width: 10px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+	  background-color: #ffffff;
+} /* the new scrollbar will have a flat appearance with the set background color */
+::-webkit-scrollbar-thumb {
+	  background-color: rgba(0, 0, 0, 0.2);
+	  -webkit-border-radius:5px;
+} /* this will style the thumb, ignoring the track */
+::-webkit-scrollbar-button {
+	  background-color: #ffffff;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+::-webkit-scrollbar-corner {
+	  background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+/* panel kiri */
+.panelkiri{
+	border:solid 0px red;
+	width:79%;
+	float:left;
+}
+.invoice {
+	overflow:auto;
+	height:100%;
+	padding-right:10px;
+}
+.table {
+	border:solid 1px #094a93;
+}
+.tablehead {
+	font-weight:bold;
+	font-size:12px;
+	text-align:center;
+}
+.tablecont {
+	font-size:12px;
+	text-align:center;
+}
+.default {
+	font-size:12px;
+}
+.logo{
+	width:150px;
+	height:auto;
+}
+.imgkarya {
+	width:100px;
+	height:auto;
+}
+
+/* panel kanan */
+.panelkanan {
+	width:200px;
+	height: 100%;
+	float:right;
+	background: #e4e4e5 url('../images/spacer_invoice.png');
+	background-repeat:repeat-y;
+}
+.menucontainer {
+	padding:15px;
+}
+.menucontainer a {
+	text-decoration:none;
+}
+.menucontainer ul {
+	line-height:20px;
+	padding-left:15px;
+}
+.submitbutton {
+	background:url('../images/blue_button.png');
+	width:150px;
+	height:30px;
+	text-align:center;
+	padding:0px;
+	margin:auto;
+	border:0px;
+	color:#ffffff;
+}

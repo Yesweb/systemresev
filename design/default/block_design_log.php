@@ -1,0 +1,1 @@
+<h1>Log</h1>	<ul>	<?php		$menu = $db->Execute("SELECT * FROM checkin ORDER BY `id` ASC");		while($data_menu = $menu->FetchRow()) {	?>		<li><?=$data_menu['memberid'];?> - <?=$data_menu['check'];?> - <?=$data_menu['status'];?> - <?=$data_menu['terminal'];?></li>	<?php		} //EOF while($data_menu = $menu->FetchRow())	?>	</ul>

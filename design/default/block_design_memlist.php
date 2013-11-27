@@ -1,0 +1,1 @@
+<ul>	<li><b>[Nomor ID]&nbsp; - &nbsp;[Status]</b></li><?php    $sqlmem = "SELECT * FROM member ORDER BY `id` ASC";	$memlist = $db->Execute($sqlmem);	while($data_memlist = $memlist->FetchRow()) {?>	<li><?=$data_memlist['memberid'];?>&nbsp; - &nbsp;<?=$data_memlist['status'];?></li><?php	} //while($data_memlist = $memlist->FetchRow())?></ul>
