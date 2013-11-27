@@ -9,16 +9,23 @@
 		<input class="submitbutton" type="submit" value="Submit">
 	</form>
 	<h3>Manage</h3>
-	<b>Register ID Card</b>
-	<form action="" method="get">
-		<input type="hidden" name="view" value="register">
-		<input type="text" name="memberid" value="">
-		<input class="submitbutton" type="submit" value="Register">
-	</form>
-	<b>Aktivasi ID Card</b>
-	<form action="" method="get">
-		<input type="hidden" name="view" value="aktivasi">
-		<input type="text" name="memberid" value="">
-		<input class="submitbutton" type="submit" value="Aktivkan">
-	</form>
+	<ul>
+		<li>
+		Register ID Card:
+		<form action="" method="get">
+			<input type="hidden" name="view" value="register">
+			<input type="text" name="memberid" value="">
+			<input class="submitbutton" type="submit" value="Register">
+		</form>
+		</li>
+		<li>
+		Aktivasi ID Card:
+		<form action="" method="get">
+			<input type="hidden" name="view" value="aktivasi">
+			<input type="text" name="memberid" value="">
+			<input class="submitbutton" type="submit" value="Aktivkan">
+		</form>
+		</li>
+		<li><a href="?view=memberlist">Daftar ID Card</a></li>
+	</ul>
 </div>
