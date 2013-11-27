@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <html style="height: 100%;">
 <head>
-<title>Systemreserv</title>
+<title>System Reservasi</title>
 
 <style type="text/css" media="all">
 	@import "design/<?= $_CONFIG['templ']['main']; ?>/css/style.css";
