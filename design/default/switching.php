@@ -6,12 +6,24 @@ switch($_GET['view']) {
 		include ("design/".$_CONFIG['templ']['main']."/block_design_log.php");
 	break;
 	
+	case "check":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_check.php");
+	break;
+	
 	case "input":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_input.php");
 	break;
 	
+	case "registerform":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_registerform.php");
+	break;
+	
 	case "register":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_register.php");
+	break;
+	
+	case "aktivasiform":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_aktivasiform.php");
 	break;
 	
 	case "aktivasi":
