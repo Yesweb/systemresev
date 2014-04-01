@@ -2,7 +2,7 @@
 	<h3>Checkin/Checkout</h3>
 	<ul>
 		<li><a href="index.php">Home</a></li>
-		<li><a href="index.php?view=check"><b>Input ID Member</b></a></li>
+		<li><a href="index.php?view=check"><b>Checkin/Checkout</b></a></li>
 	</ul>
 	<h3>Manage</h3>
 	<ul>

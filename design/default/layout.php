@@ -7,6 +7,27 @@
 	@import "design/<?= $_CONFIG['templ']['main']; ?>/css/style.css";
 </style>
 
+<script type="text/javascript">
+window.onload = function () {
+    setCursor(document.getElementById('focus'), 0, 0)
+}
+
+function setCursor(el, st, end) {
+    if (el.setSelectionRange) {
+        el.focus();
+        el.setSelectionRange(st, end);
+    } else {
+        if (el.createTextRange) {
+            range = el.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', st);
+            range.select();
+        }
+    }
+}
+</script>
+
 </head>
 <body style="height: 100%;">
 
