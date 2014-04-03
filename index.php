@@ -1,4 +1,5 @@
 <?php
+	include ("cek_login.php");
 	include ("lib/adodb/adodb.inc.php");
 	include ("lang/indonesia.php");
 	include ("config.php");
