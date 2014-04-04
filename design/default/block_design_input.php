@@ -2,6 +2,7 @@
 <?php
 //SOF AUTH
 include ("application/app_set_param.php");
+$author = $_SESSION['username'];
 $memberid = $_GET['memberid'];
 $terminal = $_GET['term'];
 $terminalstat = $_GET['termstat'];
@@ -61,8 +62,8 @@ if (!is_numeric($memberid)) {
 	?>
 	<?php
 		$sqlinsert = "
-			INSERT INTO `checkin` (`id`, `memberid`, `check`, `status`, `terminal`)
-			VALUES (NULL, '$memberid', CURRENT_TIMESTAMP, '$inputstat', '$terminal')
+			INSERT INTO `checkin` (`id`, `memberid`, `check`, `status`, `author`, `terminal`)
+			VALUES (NULL, '$memberid', CURRENT_TIMESTAMP, '$inputstat', '$author', '$terminal')
 		";
 		if ($inputstat == 1 && $terminalstat == 2){
 			echo "<h4 style='text-align:center;'>$code94</h4>";

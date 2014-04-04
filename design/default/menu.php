@@ -1,4 +1,6 @@
 <div class="menucontainer" style="border:solid 0px red;">
+	Wellcome, <b><?=$_SESSION['username']?></b>
+	<hr>
 	<h3>Checkin/Checkout</h3>
 	<ul>
 		<li><a href="index.php">Home</a></li>
