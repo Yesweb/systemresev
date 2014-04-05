@@ -3,7 +3,12 @@ function getTableData($tableName, $page = 1, $limit = 20)
 {
     $dataTable = array();
     $startRow = ($page - 1) * $limit;
-    $query = mysql_query('SELECT * FROM `'.$tableName.'` ORDER BY `member`.`id` DESC LIMIT '.$startRow.', '.$limit);
+    $query = mysql_query('
+		SELECT * FROM `'.$tableName.'`
+		LEFT JOIN member_stat
+		ON member.status=member_stat.stat_code
+		ORDER BY `member`.`id` DESC LIMIT '.$startRow.', '.$limit
+	);
  
     while ($data = mysql_fetch_assoc($query)) 
         array_push($dataTable, $data);

@@ -3,7 +3,14 @@ function getTableData($tableName, $page = 1, $limit = 20)
 {
     $dataTable = array();
     $startRow = ($page - 1) * $limit;
-    $query = mysql_query('SELECT * FROM `'.$tableName.'` ORDER BY `checkin`.`id` DESC LIMIT '.$startRow.', '.$limit);
+    $query = mysql_query('
+		SELECT * FROM `'.$tableName.'`
+		LEFT JOIN status
+		ON checkin.status=status.status
+		LEFT JOIN terminal
+		ON checkin.terminal=terminal.kodeterminal
+		ORDER BY `checkin`.`id` DESC LIMIT '.$startRow.', '.$limit
+	);
  
     while ($data = mysql_fetch_assoc($query)) 
         array_push($dataTable, $data);
