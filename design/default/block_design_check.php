@@ -1,4 +1,5 @@
-	
+<?php
+?>
 <center>
 <h4>Checkin/Chekout</h4>
 <form action="" method="get">

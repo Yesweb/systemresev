@@ -13,4 +13,7 @@
 	$code97 = "97:error inserting: Duplicate entry."; //
 	$code98 = "98:Nomor ID belum terdaftar, pastikan anda menulis dengan benar, atau hubungi bagian reservasi."; //
 	$code99 = "99:Nomor ID harus angka."; //
+	$code101 = "101:Nomor ID tidak boleh kurang dari 12 digit, dan digit terakhir tidak boleh 0 (nol)."; //
+	$code102 = "101:Nomor ID tidak boleh lebih dari 12 digit, dan 4 digit pertama harus di awali dengan 1000."; //
+	$code103 = "101:Nomor ID sudah diaktifkan."; //
 ?>

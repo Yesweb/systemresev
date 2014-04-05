@@ -1,8 +1,17 @@
 <?php
+include ("lib/back.php");
 include ("application/app_set_param.php");
 $memberid = $_GET['memberid'];
+
+$cek = $db->Execute("SELECT status FROM member WHERE memberid=$memberid");
+while($data_cek = $cek->FetchRow()) {
+	$cek_res = $data_cek['status'];
+}
+		
 if (!is_numeric($memberid)) {
-	echo "<h4 style='text-align:center;'>$code99</h4>";
+	echo "<h4 style='text-align:center;'>$code99<br /><br />[ $back ]</h4>";
+} else if ($cek_res == 1) {
+	echo "<h4 style='text-align:center;'>$code103<br /><br />[ $back ]</h4>";
 } else {
 
 	$updateauth = $db->Execute("SELECT * FROM member WHERE memberid=$memberid");
@@ -11,7 +20,7 @@ if (!is_numeric($memberid)) {
 	}
 	if (empty($dauth)) {
 		echo "<h4 style='text-align:center;'>$memberid</h4>";
-		echo "<h5 style='text-align:center;'>$code98</h5>";
+		echo "<h4 style='text-align:center;'>$code98<br /><br />[ $back ]</h4>";
 	} else {
 		$record["status"] = 1; 
 		$db->AutoExecute(member,$record,'UPDATE', "memberid='$memberid'");

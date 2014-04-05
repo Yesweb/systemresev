@@ -1,6 +1,7 @@
 <!-- curl http://localhost/yesweb/systemreserv/?view=input&memberid=67890&term=900&termstat=1 -->
 <?php
 //SOF AUTH
+include ("lib/back.php");
 include ("application/app_set_param.php");
 $author = $_SESSION['username'];
 $memberid = $_GET['memberid'];
@@ -9,7 +10,7 @@ $terminalstat = $_GET['termstat'];
 $sqlauth = $db->Execute("SELECT * FROM member WHERE memberid=$memberid");
 
 if (!is_numeric($memberid)) {
-	echo "<h4 style='text-align:center;'>$code99</h4>";
+	echo "<h4 style='text-align:center;'>$code99<br /><br />[ $back ]</h4>";
 } else {
 
 	while($data_auth = $sqlauth->FetchRow()) {

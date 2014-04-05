@@ -1,4 +1,5 @@
 <?php
+include ("lib/back.php");
 include ("application/app_set_param.php");
 
 switch($_GET['view']) {
@@ -36,31 +37,31 @@ switch($_GET['view']) {
 
 	//error handling
 	case "81":
-		echo "<h4 style='text-align:center;'>$code81</h4>";
+		echo "<h4 style='text-align:center;'>$code81<br /><br />[ $back ]</h4>";
 	break;
 
 	case "82":
-		echo "<h4 style='text-align:center;'>$code82</h4>";;
+		echo "<h4 style='text-align:center;'>$code82<br /><br />[ $back ]</h4>";;
 	break;
 
 	case "91":
-		echo "<h4 style='text-align:center;'>$code91</h4>";
+		echo "<h4 style='text-align:center;'>$code91<br /><br />[ $back ]</h4>";
 	break;
 
 	case "92":
-		echo "<h4 style='text-align:center;'>$code92</h4>";
+		echo "<h4 style='text-align:center;'>$code92<br /><br />[ $back ]</h4>";
 	break;
 
 	case "93":
-		echo "<h4 style='text-align:center;'>$code93</h4>";
+		echo "<h4 style='text-align:center;'>$code93<br /><br />[ $back ]</h4>";
 	break;
 
 	case "94":
-		echo "<h4 style='text-align:center;'>$code94</h4>";
+		echo "<h4 style='text-align:center;'>$code94<br /><br />[ $back ]</h4>";
 	break;
 
 	case "95":
-		echo "<h4 style='text-align:center;'>$code95</h4>";
+		echo "<h4 style='text-align:center;'>$code95<br /><br />[ $back ]</h4>";
 	break;
 }
 ?>
