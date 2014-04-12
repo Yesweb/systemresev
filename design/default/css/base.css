@@ -62,7 +62,7 @@
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
-		color: #181818;
+		color: #094a93;
 		font-family: "Calibri", "Times New Roman", serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -79,7 +79,7 @@
 	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
 	em { font-style: italic; }
-	strong { font-weight: bold; color: #333; }
+	strong { font-weight: bold; color: #094a93; }
 	small { font-size: 80%; }
 
 /*	Blockquotes  */
@@ -133,19 +133,19 @@
 	input[type="reset"],
 	input[type="button"] {
 		background: #eee; /* Old browsers */
-		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
-		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
-		background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
-		background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
-		background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
-		background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+		background: #eee -moz-linear-gradient(top, rgba(154,188,252,.5) 0%, rgba(89,147,255,1.00) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(154,188,252,.5)), color-stop(100%,rgba(89,147,255,1.00))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* W3C */
 	  border: 1px solid #aaa;
 	  border-top: 1px solid #ccc;
 	  border-left: 1px solid #ccc;
-	  -moz-border-radius: 3px;
-	  -webkit-border-radius: 3px;
-	  border-radius: 3px;
-	  color: #444;
+	  -moz-border-radius: 15px;
+	  -webkit-border-radius: 15px;
+	  border-radius: 15px;
+	  color: #444; /*#444*/
 	  display: inline-block;
 	  font-size: 11px;
 	  font-weight: bold;
@@ -164,12 +164,12 @@
 	input[type="button"]:hover {
 		color: #222;
 		background: #ddd; /* Old browsers */
-		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
-		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
-		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
-		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
-		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
-		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+		background: #ddd -moz-linear-gradient(top, rgba(154,188,252,.5) 0%, rgba(89,147,255,1.00) 100%); /* FF3.6+ */
+		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(154,188,252,.5)), color-stop(100%,rgba(89,147,255,1.00))); /* Chrome,Safari4+ */
+		background: #ddd -webkit-linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ddd -o-linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* Opera11.10+ */
+		background: #ddd -ms-linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* IE10+ */
+		background: #ddd linear-gradient(top, rgba(154,188,252,.5) 0%,rgba(89,147,255,1.00) 100%); /* W3C */
 	  border: 1px solid #888;
 	  border-top: 1px solid #aaa;
 	  border-left: 1px solid #aaa; }

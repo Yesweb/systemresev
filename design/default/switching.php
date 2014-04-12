@@ -2,6 +2,13 @@
 include ("lib/back.php");
 include ("application/app_set_param.php");
 
+$usern = $_SESSION['username'];
+$stat = $db->Execute("SELECT permit FROM user WHERE username='$usern'");
+while($data_termstat = $stat->FetchRow()) {
+	$cek_termstat = $data_termstat['permit'];
+}
+
+
 switch($_GET['view']) {
 	case "":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_log.php");
@@ -33,6 +40,14 @@ switch($_GET['view']) {
 	
 	case "memberlist":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_memlist.php");
+	break;
+	
+	case "user":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_user.php");
+	break;
+	
+	case "adduser":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_adduser.php");
 	break;
 
 	//error handling

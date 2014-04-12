@@ -2,6 +2,7 @@ body {
 	font-family:Calibri, Arial;
 	color:#094a93;
 	margin-top: 0px;
+	margin-bottom: 0px;
 	scrollbar-face-color: #d7d7d7;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
@@ -32,7 +33,10 @@ body {
 .invoice {
 	overflow:auto;
 	height:100%;
+	padding-top:30px;
 	padding-right:10px;
+	padding-left:20px;
+	padding-bottom:0px;
 }
 .table {
 	border:solid 1px #094a93;
@@ -61,13 +65,17 @@ body {
 /* panel kanan */
 .panelkanan {
 	width:200px;
-	height: 100%;
 	float:right;
 	background: #e4e4e5 url('../images/spacer_invoice.png');
 	background-repeat:repeat-y;
 }
 .menucontainer {
-	padding:15px;
+	padding-top:15px;
+	padding-right:15px;
+	padding-left:15px;
+	padding-bottom:0px;
+	overflow:auto;
+	height:100%;
 }
 .menucontainer a {
 	text-decoration:none;

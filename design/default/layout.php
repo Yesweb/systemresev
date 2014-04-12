@@ -3,9 +3,10 @@
 <head>
 <title>System Reservasi</title>
 
-<style type="text/css" media="all">
-	@import "design/<?= $_CONFIG['templ']['main']; ?>/css/style.css";
-</style>
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/base.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/skeleton.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/layout.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/style.css">
 
 <script type="text/javascript">
 window.onload = function () {

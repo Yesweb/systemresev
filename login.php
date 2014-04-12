@@ -70,7 +70,7 @@ if (!empty($_GET['error'])) {
 		<form name="login" action="auth.php" method="post">
 			<label for="regularInput">Username</label><input type="text"  name="username" id="regularInput" />
 			<label for="regularInput">Password</label><input type="password" name="password" id="regularInput" />
-			<button type="submit">Login</button>
+			<button type="submit" style="width:220px;">Login</button>
 		</form>
 	</div>
 	<div class="one-third column">

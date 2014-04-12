@@ -1,9 +1,4 @@
 <?php
-$usern = $_SESSION['username'];
-$stat = $db->Execute("SELECT permit FROM user WHERE username='$usern'");
-while($data_termstat = $stat->FetchRow()) {
-	$cek_termstat = $data_termstat['permit'];
-}
 ?>
 <center>
 <?php
@@ -12,7 +7,7 @@ if ($cek_termstat == 1) {
 } else if ($cek_termstat == 2) {
 	echo "<h4>Chekout</h4>";
 } else {
-	echo "<h4>Checkin/Chekout</h4>";
+	echo "<h4>Checkin - Chekout</h4>";
 }
 ?>
 <form action="" method="get">
