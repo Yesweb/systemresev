@@ -19,6 +19,6 @@ while($data_qryuser = $qryuser->FetchRow()) {
 }
 ?>
 	<tr align="center">
-		<td><b>[ <a href="#">Add User</a> ]</b></td><td>&nbsp;</td><td><b>[ <a href="#">Manage Group</a> ]</b></td>
+		<td><b>[ <a href="index.php?view=adduser">Add User</a> ]</b></td><td>&nbsp;</td><td><b>[ <a href="index.php?view=group">Manage Group</a> ]</b></td>
 	</tr>
 </table>

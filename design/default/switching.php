@@ -49,6 +49,30 @@ switch($_GET['view']) {
 	case "adduser":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_adduser.php");
 	break;
+	
+	case "adduserinsert":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_adduserinsert.php");
+	break;
+	
+	case "group":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_group.php");
+	break;
+	
+	case "addgroup":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_addgroup.php");
+	break;
+	
+	case "addgroupinsert":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_addgroupinsert.php");
+	break;
+	
+	case "groupmanage":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_groupmanage.php");
+	break;
+	
+	case "menuadd":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_menuadd.php");
+	break;
 
 	//error handling
 	case "81":

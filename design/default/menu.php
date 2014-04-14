@@ -38,6 +38,9 @@ if ($cek_termstat == 3) {
 	<ul>
 		<li><a href='index.php?view=user'>Manage User</a></li>
 	</ul>
+	<ul>
+		<li><a href='index.php?view=group'>Manage Group</a></li>
+	</ul>
 <?php
 } //EOF 
 ?>
