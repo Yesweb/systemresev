@@ -20,4 +20,9 @@
 	$code104 = "104:Member baru berhasil di daftarkan."; //
 	$code105 = "105:Group baru berhasil di daftarkan."; //
 	$code106 = "106:Menu baru berhasil di tambahkan."; //
+	
+	$code107 = "107:Nomor ID sudah tidak aktif."; 
+	$code108 = "108:Nomor ID berhasil di nonaktif."; //
+	
+	$code109 = "109:Nomor ID harus di isi."; //
 ?>

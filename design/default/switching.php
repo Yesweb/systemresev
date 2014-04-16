@@ -38,8 +38,20 @@ switch($_GET['view']) {
 		include ("design/".$_CONFIG['templ']['main']."/block_design_aktivasi.php");
 	break;
 	
+	case "deaktivasiform":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_deaktivasiform.php");
+	break;
+	
+	case "deaktivasi":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_deaktivasi.php");
+	break;
+	
 	case "memberlist":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_memlist.php");
+	break;
+	
+	case "history":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_history.php");
 	break;
 	
 	case "user":
