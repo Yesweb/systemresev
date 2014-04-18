@@ -24,35 +24,35 @@ if (!is_numeric($memberid)) {
 		header("Location: index.php?view=92");
 		exit;
 	} else {
-	?>
+?>
 	<!--<h2><?=$memberid?></h2>-->
 		<ul>
-	<?php
+<?php
 		$member = $db->Execute("SELECT max(id) AS maxid FROM checkin WHERE memberid=$memberid");
 		while($data_member = $member->FetchRow()) {
-	?>
+?>
 			<!--<li>ID: <?=$data_member['maxid'];?></li>-->
-	<?php
+<?php
 			$dataid = $data_member['maxid'];
 		} //while($data_member = $member->FetchRow())
-	?>
+?>
 		</ul>
 		<ul>
-	<?php
+<?php
 		if (!empty($dataid)) {
 			$memberstat = $db->Execute("SELECT * FROM checkin WHERE id=$dataid");
 			while($data_memberstat = $memberstat->FetchRow()) {
-	?>
+?>
 				<!--<li><?=$data_memberstat['check'];?> - <?=$data_memberstat['status'];?></li>-->
-	<?php
+<?php
 				$stat = $data_memberstat['status'];
 			} //EOF while($data_memberstat = $memberstat->FetchRow())
 		} else {
 			$stat = 0;
 		} //EOF if !emty($dataid)
-	?>
+?>
 		</ul>
-	<?php
+<?php
 		if ($stat == 1) {
 			$inputstat = 2;
 		} else if ($stat == 2) {
@@ -60,8 +60,7 @@ if (!is_numeric($memberid)) {
 		} else if ($stat == 0) {
 			$inputstat = 1;
 		}
-	?>
-	<?php
+		
 		$sqlinsert = "
 			INSERT INTO `checkin` (`id`, `memberid`, `check`, `status`, `author`, `terminal`)
 			VALUES (NULL, '$memberid', CURRENT_TIMESTAMP, '$inputstat', '$author', '$terminal')
@@ -95,8 +94,7 @@ if (!is_numeric($memberid)) {
 			header("Location: index.php?view=96");
 			exit;
 		}
-	?>
-	<?php
+		
 	} //EOF AUTH
 	
 } //EOF if (!is_numeric($memberid))

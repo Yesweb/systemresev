@@ -1,5 +1,12 @@
-<h2>Manage Group</h2>
+<h2>Result</h2>
 <?php
+include_once("design/".$_CONFIG['templ']['main']."/block_design_filterform.php");
+
+$idmember = $_POST['idmember'];
+$check = $_POST['tanggal'];
+$status = $_POST['status'];
+$author = $_POST['author'];
+
 //untuk menampilkan URL utama
 function baseurl() {
 	$act = $_GET['view']; //setting disini
@@ -22,13 +29,20 @@ if (isset($_GET['perPage']) && !empty($_GET['perPage']))
     $dataPerPage = (int)$_GET['perPage'];
  
 // tabel yang akan dipaginasi
-$table = 'user_permission';
+$table = 'checkin';
 
 // query yang akan diambil datanya
 $tableQuery = "
-	SELECT *
-	FROM `user_permission`
-	ORDER BY `id_perm` ASC
+	SELECT * FROM `checkin`
+	LEFT JOIN status
+	ON checkin.status=status.status
+	LEFT JOIN terminal
+	ON checkin.terminal=terminal.kodeterminal
+	WHERE `memberid` LIKE '%$idmember%'
+	AND `checkin`.`check` LIKE '%$check%'
+	AND `checkin`.`status` LIKE '%$status%'
+	AND `checkin`.`author` LIKE '%$author%'
+	ORDER BY `checkin`.`id` DESC
 	";
  
 // ambil data
@@ -36,32 +50,16 @@ $dataTable = getTableData($tableQuery, $page, $dataPerPage);
  
 // menampilkan tombol paginasi
 showPagination($table, $dataPerPage); 
-
 ?>
-
-<ul>
-
+<br /><br />
+	<ul>
+		<li><strong>[Nomor ID]&nbsp; - &nbsp;[Tanggal]&nbsp;[Jam]&nbsp; - &nbsp;[Status]&nbsp; - &nbsp;[Author]&nbsp; - &nbsp;[Terminal]</strong></li>
 <?php
 foreach ($dataTable as $i => $data) {
 	$no = ($i + 1) + (($page - 1) * $dataPerPage);
 ?>
-	
-	<li>
-<?php
-	if ($data['id_perm'] == 1 or $data['id_perm'] == 2 or $data['id_perm'] == 3 or $data['id_perm'] == 4) {
-		echo "<strong>[ Manage group menu ]</strong>";
-	} else {
-		$ig = $data['id_perm'];
-		echo "<strong>[ <a href='index.php?view=groupmanage&ig=$ig'>Manage group menu</a> ]</strong>";
-	}
-?>
-		- <?=$data['name']?>
-	</li>
-	
+		<li><?=number_format($data['memberid'],0,",","-");?> - <?=$data['check'];?> - <?=$data['name'];?> - <?=$data['author'];?> - <?=$data['namaterminal'];?></li>
 <?php
 } //EOF foreach ($dataTable as $i => $data)
 ?>
-
-
-	<li><strong>[[ <a href='index.php?view=addgroup'>Add user group</a> ]]</strong></li>
-</ul>
+	</ul>

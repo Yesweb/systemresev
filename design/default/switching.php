@@ -13,6 +13,9 @@ switch($_GET['view']) {
 	case "":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_log.php");
 	break;
+	case "filres":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_filres.php");
+	break;
 	
 	case "check":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_check.php");

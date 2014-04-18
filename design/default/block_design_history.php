@@ -1,7 +1,9 @@
 <?php
 $id = $_GET['id'];
 ?>
-<h2>History [ <?=$id?> ]</h2>
+<h2>History</h2>
+<h4>No. ID: <?=number_format($id,0,",","-")?></h4>
+<br />
 <ul>
 	<li><strong>[Tanggal]&nbsp; - &nbsp;[Status]&nbsp; - &nbsp;[Author]</strong></li>
 <?php
@@ -19,4 +21,5 @@ while($data_hist = $hist->FetchRow()) {
 <?php
 } // EOF while($data_hist = $hist->FetchRow())
 ?>
+	<li><strong>[ <?=$back?> ]</strong></li>
 </ul>
