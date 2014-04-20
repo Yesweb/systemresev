@@ -88,6 +88,10 @@ switch($_GET['view']) {
 	case "menuadd":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_menuadd.php");
 	break;
+	
+	case "statistik":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_statistik.php");
+	break;
 
 	//error handling
 	case "81":
