@@ -17,7 +17,7 @@ $hist = $db->Execute("
 	");
 while($data_hist = $hist->FetchRow()) {
 ?>
-	<li><?=$data_hist['date']?>&nbsp; - &nbsp;<?=$data_hist['stat_name']?>&nbsp; - &nbsp;<?=$data_hist['author']?></li>
+	<li><?=date('d F Y H:i:s', strtotime($data_hist['date']))?>&nbsp; - &nbsp;<?=$data_hist['stat_name']?>&nbsp; - &nbsp;<?=$data_hist['author']?></li>
 <?php
 } // EOF while($data_hist = $hist->FetchRow())
 ?>

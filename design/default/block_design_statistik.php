@@ -8,7 +8,7 @@
 	");
 	while($data_tgl = $tgl->FetchRow()) {
 	$dtgl = $data_tgl['tgl'];
-	echo "<li><strong>$dtgl</strong></li>";
+	echo "<li><strong>".date('d F Y', strtotime($dtgl))."</strong></li>";
 	echo "<ul>";
 	
 		$dcnt = $db->Execute("

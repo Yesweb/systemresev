@@ -8,7 +8,7 @@
 	$tgl = $db->Execute("SELECT DISTINCT DATE_FORMAT(`check`, '%Y-%m-%d') AS tgl FROM `checkin` ORDER BY tgl ASC");
 	while($data_tgl = $tgl->FetchRow()) {
 ?>
-		<option value="<?=$data_tgl['tgl']?>"><?=$data_tgl['tgl']?></option>
+		<option value="<?=$data_tgl['tgl']?>"><?=date('d F Y', strtotime($data_tgl['tgl']))?></option>
 <?php
 	}// EOF while($data_tgl = $tgl->FetchRow())
 ?>
