@@ -5,7 +5,7 @@ $id = $_GET['id'];
 <h4>No. ID: <?=number_format($id,0,",","-")?></h4>
 <br />
 <ul>
-	<li><strong>[Tanggal]&nbsp; - &nbsp;[Status]&nbsp; - &nbsp;[Author]</strong></li>
+	<li><strong>[Tanggal] [Jam]&nbsp; - &nbsp;[Status]&nbsp; - &nbsp;[Author]</strong></li>
 <?php
 
 $hist = $db->Execute("
@@ -17,7 +17,7 @@ $hist = $db->Execute("
 	");
 while($data_hist = $hist->FetchRow()) {
 ?>
-	<li><?=date('d F Y H:i:s', strtotime($data_hist['date']))?>&nbsp; - &nbsp;<?=$data_hist['stat_name']?>&nbsp; - &nbsp;<?=$data_hist['author']?></li>
+	<li><?=date('d F Y (H:i:s)', strtotime($data_hist['date']))?>&nbsp; - &nbsp;<?=$data_hist['stat_name']?>&nbsp; - &nbsp;<?=$data_hist['author']?></li>
 <?php
 } // EOF while($data_hist = $hist->FetchRow())
 ?>

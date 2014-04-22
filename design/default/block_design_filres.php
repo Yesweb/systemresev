@@ -58,7 +58,7 @@ showPagination($table, $dataPerPage);
 foreach ($dataTable as $i => $data) {
 	$no = ($i + 1) + (($page - 1) * $dataPerPage);
 ?>
-		<li><?=number_format($data['memberid'],0,",","-");?> - <?=date('d F Y H:i:s', strtotime($data['check']));?> - <?=$data['name'];?> - <?=$data['author'];?> - <?=$data['namaterminal'];?></li>
+		<li><?=number_format($data['memberid'],0,",","-");?> - <?=date('d F Y (H:i:s)', strtotime($data['check']));?> - <?=$data['name'];?> - <?=$data['author'];?> - <?=$data['namaterminal'];?></li>
 <?php
 } //EOF foreach ($dataTable as $i => $data)
 ?>
