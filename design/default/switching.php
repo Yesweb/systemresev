@@ -92,6 +92,18 @@ switch($_GET['view']) {
 	case "statistik":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_statistik.php");
 	break;
+	
+	case "batchstep01":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_batchstep01.php");
+	break;
+	
+	case "batchstep02":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_batchstep02.php");
+	break;
+	
+	case "batchstep03":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_batchstep03.php");
+	break;
 
 	//error handling
 	case "81":
