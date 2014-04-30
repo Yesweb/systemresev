@@ -1,4 +1,4 @@
-<h2>Manage Group</h2>
+<h4>Manage Group</h4>
 <?php
 //untuk menampilkan URL utama
 function baseurl() {
@@ -38,15 +38,15 @@ $dataTable = getTableData($tableQuery, $page, $dataPerPage);
 showPagination($table, $dataPerPage); 
 
 ?>
-
-<ul>
+<br /><br />
+<table class="zebra-striped">
 
 <?php
 foreach ($dataTable as $i => $data) {
 	$no = ($i + 1) + (($page - 1) * $dataPerPage);
 ?>
-	
-	<li>
+	<tr>
+		<td>
 <?php
 	if ($data['id_perm'] == 1 or $data['id_perm'] == 2 or $data['id_perm'] == 3 or $data['id_perm'] == 4) {
 		echo "<strong>[ Manage group menu ]</strong>";
@@ -55,13 +55,15 @@ foreach ($dataTable as $i => $data) {
 		echo "<strong>[ <a href='index.php?view=groupmanage&ig=$ig'>Manage group menu</a> ]</strong>";
 	}
 ?>
-		- <?=$data['name']?>
-	</li>
-	
+		</td>
+		<td>
+			<?=$data['name']?>
+		</td>
+	</tr>
 <?php
 } //EOF foreach ($dataTable as $i => $data)
 ?>
-
-
-	<li><strong>[[ <a href='index.php?view=addgroup'>Add user group</a> ]]</strong></li>
-</ul>
+	<tr>
+		<td><strong>[[ <a href='index.php?view=addgroup'>Add user group</a> ]]</strong></td><td>&nbsp;</td>
+	</tr>
+</table>

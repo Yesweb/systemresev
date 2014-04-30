@@ -1,4 +1,4 @@
-<h2>Result</h2>
+<h3>Result</h3>
 <?php
 include_once("design/".$_CONFIG['templ']['main']."/block_design_filterform.php");
 
@@ -52,14 +52,18 @@ $dataTable = getTableData($tableQuery, $page, $dataPerPage);
 showPagination($table, $dataPerPage); 
 ?>
 <br /><br />
-	<ul>
-		<li><strong>[Nomor ID]&nbsp; - &nbsp;[Tanggal]&nbsp;[Jam]&nbsp; - &nbsp;[Status]&nbsp; - &nbsp;[Author]&nbsp; - &nbsp;[Terminal]</strong></li>
+<table class="zebra-striped">
+	<tr>
+		<th>Nomor ID</th><th>Tanggal (Jam)</th><th>Status</th><th>Author</th><th>Terminal</th>
+	</tr>
 <?php
 foreach ($dataTable as $i => $data) {
 	$no = ($i + 1) + (($page - 1) * $dataPerPage);
 ?>
-		<li><?=number_format($data['memberid'],0,",","-");?> - <?=date('d F Y (H:i:s)', strtotime($data['check']));?> - <?=$data['name'];?> - <?=$data['author'];?> - <?=$data['namaterminal'];?></li>
+	<tr>
+		<td><?=number_format($data['memberid'],0,",","-");?></td><td><?=date('d F Y (H:i:s)', strtotime($data['check']));?></td><td><?=$data['name'];?></td><td><?=$data['author'];?></td><td><?=$data['namaterminal'];?></td>
+	</tr>
 <?php
 } //EOF foreach ($dataTable as $i => $data)
 ?>
-	</ul>
+</table>

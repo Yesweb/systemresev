@@ -1,4 +1,4 @@
-<h4 style="text-align:center;">Manage User</h4>
+<h4>Manage User</h4>
 <?php
 //untuk menampilkan URL utama
 function baseurl() {
@@ -39,10 +39,10 @@ $dataTable = getTableData($tableQuery, $page, $dataPerPage);
 showPagination($table, $dataPerPage); 
 
 ?>
-
-<table align="center">
-	<tr align="center">
-		<td><b>User Name</b></td><td width="30">&nbsp;</td><td><b>Group</b></td>
+<br /><br />
+<table class="zebra-striped">
+	<tr>
+		<th><b>User Name</b></th><th><b>Group</b></th>
 	</tr>
 
 <?php
@@ -50,13 +50,13 @@ foreach ($dataTable as $i => $data) {
 	$no = ($i + 1) + (($page - 1) * $dataPerPage);
 ?>
 	<tr>
-		<td><?=$data['username']?></td><td>&nbsp;</td><td><?=$data['name']?></td>
+		<td><?=$data['username']?></td><td><?=$data['name']?></td>
 	</tr>
 <?php
 } //EOF foreach ($dataTable as $i => $data)
 ?>
 
-	<tr align="center">
-		<td><b>[ <a href="index.php?view=adduser">Add User</a> ]</b></td><td>&nbsp;</td><td><b>[ <a href="index.php?view=group">Manage Group</a> ]</b></td>
+	<tr>
+		<th>[ <a href="index.php?view=adduser">Add User</a> ]</th><th>[ <a href="index.php?view=group">Manage Group</a> ]</th>
 	</tr>
 </table>

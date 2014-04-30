@@ -1,8 +1,11 @@
 <form action="index.php?view=filres" name="filter" method="post">
+<div class="eight columns">
 	<label for="idmember">ID Member</label>
-	<input type="text" name="idmember" value="">
+	<input type="text" name="idmember" value="" style="width:100%;">
+</div>
+<div class="four columns">
 	<label for="tanggal">Tanggal</label>
-	<select name="tanggal">
+	<select name="tanggal" style="width:100%;">
 		<option value=""></option>
 <?php
 	$tgl = $db->Execute("SELECT DISTINCT DATE_FORMAT(`check`, '%Y-%m-%d') AS tgl FROM `checkin` ORDER BY tgl ASC");
@@ -13,8 +16,10 @@
 	}// EOF while($data_tgl = $tgl->FetchRow())
 ?>
 	</select>
+</div>
+<div class="four columns">
 	<label for="status">Status</label>
-	<select name="status">
+	<select name="status" style="width:100%;">
 		<option value=""></option>
 <?php
 	$status = $db->Execute("SELECT * FROM status");
@@ -25,8 +30,10 @@
 	}// EOF while($data_status = $status->FetchRow())
 ?>
 	</select>
+</div>
+<div class="four columns">
 	<label for="author">Author</label>
-	<select name="author">
+	<select name="author" style="width:100%;">
 		<option value=""></option>
 <?php
 	$author = $db->Execute("SELECT DISTINCT author FROM checkin");
@@ -37,5 +44,9 @@
 	}// EOF while($data_author = $author->FetchRow())
 ?>
 	</select>
-	<button type="submit">Search</button>
+</div>
+<div class="four columns">
+	<button type="submit" style="width:100%;">Search</button>
+</div>
 </form>
+<div style="clear:both;"></div>

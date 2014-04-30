@@ -1,11 +1,13 @@
 <?php
 $id = $_GET['id'];
 ?>
-<h2>History</h2>
+<h3>History</h3>
 <h4>No. ID: <?=number_format($id,0,",","-")?></h4>
 <br />
-<ul>
-	<li><strong>[Tanggal] [Jam]&nbsp; - &nbsp;[Status]&nbsp; - &nbsp;[Author]</strong></li>
+<table class="zebra-striped">
+	<tr>
+		<th>Tanggal (Jam)</th><th>Status</th><th>Author</th>
+	</tr>
 <?php
 
 $hist = $db->Execute("
@@ -17,9 +19,13 @@ $hist = $db->Execute("
 	");
 while($data_hist = $hist->FetchRow()) {
 ?>
-	<li><?=date('d F Y (H:i:s)', strtotime($data_hist['date']))?>&nbsp; - &nbsp;<?=$data_hist['stat_name']?>&nbsp; - &nbsp;<?=$data_hist['author']?></li>
+	<tr>
+		<td><?=date('d F Y (H:i:s)', strtotime($data_hist['date']))?></td><td><?=$data_hist['stat_name']?></td><td><?=$data_hist['author']?></td>
+	</tr>
 <?php
 } // EOF while($data_hist = $hist->FetchRow())
 ?>
-	<li><strong>[ <?=$back?> ]</strong></li>
-</ul>
+	<tr>
+		<td><strong>[ <?=$back?> ]</strong></td><td>&nbsp;</td><td>&nbsp;</td>
+	</tr>
+</table>
