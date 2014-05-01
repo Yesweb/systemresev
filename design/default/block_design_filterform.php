@@ -1,11 +1,11 @@
 <form action="index.php?view=filres" name="filter" method="post">
 <div class="eight columns">
 	<label for="idmember">ID Member</label>
-	<input type="text" name="idmember" value="" style="width:100%;">
+	<input type="text" name="idmember" value="" style="width:86%;">
 </div>
 <div class="four columns">
 	<label for="tanggal">Tanggal</label>
-	<select name="tanggal" style="width:100%;">
+	<select name="tanggal" style="width:86%;">
 		<option value=""></option>
 <?php
 	$tgl = $db->Execute("SELECT DISTINCT DATE_FORMAT(`check`, '%Y-%m-%d') AS tgl FROM `checkin` ORDER BY tgl ASC");
@@ -19,7 +19,7 @@
 </div>
 <div class="four columns">
 	<label for="status">Status</label>
-	<select name="status" style="width:100%;">
+	<select name="status" style="width:86%;">
 		<option value=""></option>
 <?php
 	$status = $db->Execute("SELECT * FROM status");
@@ -33,7 +33,7 @@
 </div>
 <div class="four columns">
 	<label for="author">Author</label>
-	<select name="author" style="width:100%;">
+	<select name="author" style="width:86%;">
 		<option value=""></option>
 <?php
 	$author = $db->Execute("SELECT DISTINCT author FROM checkin");
@@ -46,7 +46,7 @@
 	</select>
 </div>
 <div class="four columns">
-	<button type="submit" style="width:100%;">Search</button>
+	<button type="submit" style="width:86%;">Search</button>
 </div>
 </form>
 <div style="clear:both;"></div>

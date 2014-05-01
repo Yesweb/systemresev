@@ -1,5 +1,8 @@
-<?php ob_start(); ?>
-<html style="height: 100%;">
+<?php
+ob_start();
+$usern = $_SESSION['username'];
+?>
+<html>
 <head>
 
 	<!-- Basic Page Needs
@@ -45,28 +48,36 @@ function setCursor(el, st, end) {
 </script>
 
 </head>
-<body style="height: 100%;">
+<body>
 
-<div class="container">
-	<div class="sixteen columns">
-		<h1 class="remove-bottom" style="margin-top: 20px">Sistem reservasi</h1>
-		<h5>Version 1.00</h5>
+<div class="container" style="background: #e4e4e5;">
+	<div class="sixteen columns headerbg" style="margin-left: 0px; margin-right: 0px; width:100%;">
+		<div class="ten columns" style="border: 0px solid red;">
+			<h3 class="logotext" style="margin-top: 5px;">Sistem reservasi</h3>
+		</div>
+		<div class="five columns" style="border: 0px solid red;">
+			<div class="welcome">Wellcome, <strong><?=$usern?></strong></div>
+		</div>
 	</div>
 	
-	<div class="twelve columns">
-		<?php
-			include ("design/".$_CONFIG['templ']['main']."/switching.php");
-		?>
+	<div class="twelve columns panelkiri" style="margin-left: 0px; margin-right: 0px;">
+		<div class="contentcontainer">
+<?php
+		include ("design/".$_CONFIG['templ']['main']."/switching.php");
+?>
+		</div>
 	</div>
 
-	<div class="four columns panelkanan" style="border:solid 0px red;">
-		<?php
+	<div class="four columns" style="margin-left: 0px; margin-right: 0px; border:solid 0px red;">
+		<div class="menucontainer" style="border:solid 0px red;">
+<?php
 		include ("design/".$_CONFIG['templ']['main']."/menu.php");
-		?>
+?>
+		</div>
 	</div>
 	
-	<div class="sixteen columns">
-		<h5>Footer</h5>
+	<div class="sixteen columns" style="background: #000000; margin-left: 0px; margin-right: 0px; width:100%;">
+		<h5 style="color: #ffffff;">Footer</h5>
 	</div>
 </div>
 </body>

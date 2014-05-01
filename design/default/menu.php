@@ -1,7 +1,3 @@
-<div class="menucontainer" style="border:solid 0px red;">
-	Wellcome, <strong><?=$usern?></strong>
-	<hr>
-	<!--<h3>Checkin/Checkout</h3>-->
 	<ul>
 		<li><a href="index.php">Home</a></li>
 <?php
@@ -45,4 +41,3 @@ if ($cek_termstat == 3) {
 	<ul>
 		<li><a href="logout.php">Logout</a></li>
 	</ul>
-</div>

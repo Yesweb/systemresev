@@ -2,7 +2,6 @@
 include ("lib/back.php");
 include ("application/app_set_param.php");
 
-$usern = $_SESSION['username'];
 $stat = $db->Execute("SELECT permit FROM user WHERE username='$usern'");
 while($data_termstat = $stat->FetchRow()) {
 	$cek_termstat = $data_termstat['permit'];
