@@ -32,7 +32,8 @@ if (!empty($_SESSION['username'])) {
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/base.css">
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/skeleton.css">
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/layout.css">
-	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/style.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/style_green.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/font/stylesheet.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,14 +42,16 @@ if (!empty($_SESSION['username'])) {
 </head>
  
 <body>
+<form class="login" name="login" action="auth.php" method="post">
  
 <div class="container">
+
 	<div class="sixteen columns">
-		<h1 class="remove-bottom" style="margin-top: 20px">Sistem reservasi</h1>
-		<h5>Version 1.00</h5>
-		<hr />
+		<h1>&nbsp;</h1>
 	</div>
-	<div class="one-third column">
+
+
+	<div class="five columns">
 	&nbsp;
 <?php
 //kode php ini kita gunakan untuk menampilkan pesan eror
@@ -65,20 +68,21 @@ if (!empty($_GET['error'])) {
 }
 ?>
 	</div>
-	<div class="one-third column">
-	<h2>LOGIN</h2>
-		<form name="login" action="auth.php" method="post">
-			<label for="regularInput">Username</label><input type="text"  name="username" id="regularInput" />
-			<label for="regularInput">Password</label><input type="password" name="password" id="regularInput" />
-			<button type="submit" style="width:220px;">Login</button>
-		</form>
+	<div class="six columns shadow">
+		<div class="logincontainer">
+		<h4>Login</h4>
+			<input type="text"  name="username" id="regularInput" style="width:88%;" value="Username" />
+			<input type="password" name="password" id="regularInput" style="width:88%;" value="Password" />
+			<button type="submit" style="width: 100px;">Submit</button>
+		</div>
+		<div class="buttonlogincontainer">
+			<white01>Sistem Reservasi</white01> <bar01>|</bar01> <green01>Versi 1.0.0</green01>
+		</div>
 	</div>
-	<div class="one-third column">
+	<div class="four column">
 		&nbsp;
 	</div>
-	<div class="sixteen columns">
-		<hr />
-	</div>
 </div>
+</form>
 </body>
 </html>

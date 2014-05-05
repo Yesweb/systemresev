@@ -1,5 +1,6 @@
 <h3>Step 01</h3>
-<form name="batch01" method="post" action="index.php?view=batchstep02">
+<hr>
+<form class="skeleton" name="batch01" method="post" action="index.php?view=batchstep02">
 <?php
 $member = $db->Execute("SELECT DISTINCT memberid FROM checkin");
 while($data_member = $member->FetchRow()) {

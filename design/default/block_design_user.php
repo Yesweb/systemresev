@@ -1,4 +1,5 @@
-<h4>Manage User</h4>
+<h3>Manage User</h3>
+<hr>
 <?php
 //untuk menampilkan URL utama
 function baseurl() {
@@ -42,7 +43,7 @@ showPagination($table, $dataPerPage);
 <br /><br />
 <table class="zebra-striped">
 	<tr>
-		<th><b>User Name</b></th><th><b>Group</b></th>
+		<th>User Name</th><th>Group</th>
 	</tr>
 
 <?php

@@ -2,7 +2,8 @@
 $nilai = $_POST['nilai'];
 ?>
 <h3>Step 02</h3>
-<form name="batch02" method="post" action="index.php?view=batchstep03">
+<hr>
+<form class="skeleton" name="batch02" method="post" action="index.php?view=batchstep03">
 <?php
 foreach ($nilai as $nilai_key => $nilai_value) {
 	$sqlselect = "

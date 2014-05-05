@@ -1,5 +1,6 @@
-<h2>Add User</h2>
-<form name="adduser" action="index.php?view=adduserinsert" method="post">
+<h3>Add User</h3>
+<hr>
+<form class="skeleton" name="adduser" action="index.php?view=adduserinsert" method="post">
 	<label for="regularInput">Username</label><input type="text"  name="addusername" id="regularInput" />
 	<label for="regularInput">User Group</label>
 	<select name="addgroup" style="width:210px;">

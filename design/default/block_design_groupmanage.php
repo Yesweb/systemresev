@@ -1,5 +1,5 @@
-
-<h2>Menu</h2>
+<h3>Manage Group Menu</h3>
+<hr>
 <ul>
 <?php
 $group = $_GET['ig'];

@@ -19,8 +19,9 @@ $usern = $_SESSION['username'];
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/base.css">
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/skeleton.css">
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/layout.css">
-	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/style.css">
 	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/tables.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/css/style_green.css">
+	<link rel="stylesheet" href="design/<?=$_CONFIG['templ']['main']?>/font/stylesheet.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -50,7 +51,7 @@ function setCursor(el, st, end) {
 </head>
 <body>
 
-<div class="container" style="background: #e4e4e5;">
+<div class="container shadow" style="background: #e4e4e5;">
 	<div class="sixteen columns headerbg" style="margin-left: 0px; margin-right: 0px; width:100%;">
 		<div class="ten columns" style="border: 0px solid red;">
 			<h3 class="logotext" style="margin-top: 5px;">Sistem reservasi</h3>

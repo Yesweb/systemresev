@@ -4,6 +4,7 @@ $dmbr = $_POST['dmbr'];
 $terminal = $_POST['term'];
 ?>
 <h3>Step 03</h3>
+<hr>
 <?php
 foreach ($dmbr as $dmbr_key => $dmbr_value) {
 	$sqlinsert = "

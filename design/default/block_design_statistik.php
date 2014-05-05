@@ -1,4 +1,5 @@
-<h4>Statistik Pengunjung Pameran</h4>
+<h3>Statistik</h3>
+<hr>
 <ul>
 <?php
 	$tgl = $db->Execute("

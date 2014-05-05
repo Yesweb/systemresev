@@ -1,4 +1,5 @@
-<h4>Manage Group</h4>
+<h3>Manage Group</h3>
+<hr>
 <?php
 //untuk menampilkan URL utama
 function baseurl() {
@@ -40,6 +41,9 @@ showPagination($table, $dataPerPage);
 ?>
 <br /><br />
 <table class="zebra-striped">
+	<tr>
+		<th>Action</th><th>User Group</th>
+	</tr>
 
 <?php
 foreach ($dataTable as $i => $data) {
