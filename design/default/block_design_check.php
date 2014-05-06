@@ -10,7 +10,7 @@ if ($cek_termstat == 1) {
 	echo "<h4>Checkin - Chekout</h4>";
 }
 ?>
-<form class="skeleton" action="" method="get">
+<form class="content" action="" method="get">
 	<input type="hidden" name="view" value="input">
 	<input type="text" id="focus" name="memberid" value="">
 	<input type="hidden" name="term" value="900">

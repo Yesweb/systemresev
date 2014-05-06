@@ -1,4 +1,4 @@
-<form class="skeleton" action="index.php?view=filres" name="filter" method="post">
+<form class="content" action="index.php?view=filres" name="filter" method="post">
 <div class="eight columns">
 	<label for="idmember">ID Member</label>
 	<input type="text" name="idmember" value="" style="width:86%;">
@@ -46,6 +46,7 @@
 	</select>
 </div>
 <div class="four columns">
+	<label for="search">&nbsp;</label>
 	<button type="submit" style="width:86%;">Search</button>
 </div>
 </form>

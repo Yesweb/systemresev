@@ -16,7 +16,7 @@ while($data_qrygm = $qrygm->FetchRow()) {
 } //EOF while($data_qrygm = $qrygm->FetchRow())
 ?>
 </ul>
-<form name="menuadd" action="index.php?view=menuadd" method="post">
+<form class="content" name="menuadd" action="index.php?view=menuadd" method="post">
 	<input type="hidden" name="idperm" value="<?=$group?>">
 	<select name="menu">
 		<option value="">Add Menu</option>
