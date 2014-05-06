@@ -187,14 +187,16 @@ body {
 }
 .logotext {
 	color: #ffffff;
-	text-shadow: 0px -1px #6a6969;
+	font-size: 20px;;
+	text-shadow: 0px -1px 1px #6a6969;
 	margin: 0px 10px 0px 10px;
 }
 .welcome {
-	padding: 7px 10px 7px 15px;
+	font-size: 12px;
+	padding: 9px 10px 5px 15px;
 	margin: 9px 10px 8px 10px;
 	border-radius:15px;
-	color: #cdcdcd;
+	color: #b1b1b1;
 	border-top: 1px solid #878787;
 	border-bottom: 1px solid #878787;
 	background: #ffffff; /* Old browsers */
@@ -256,6 +258,8 @@ body {
 	height:100%;*/
 }
 .menucontainer a {
+	font-family: RobotoBlack;
+	font-size: 13px;
 	text-decoration:none;
 }
 .menucontainer ul {

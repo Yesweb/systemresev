@@ -54,7 +54,7 @@ function setCursor(el, st, end) {
 <div class="container shadow" style="background: #e4e4e5;">
 	<div class="sixteen columns headerbg" style="margin-left: 0px; margin-right: 0px; width:100%;">
 		<div class="ten columns" style="border: 0px solid red;">
-			<h3 class="logotext" style="margin-top: 5px;">Sistem reservasi</h3>
+			<h3 class="logotext" style="margin-top: 7px;">Sistem reservasi</h3>
 		</div>
 		<div class="five columns" style="border: 0px solid red;">
 			<div class="welcome">Wellcome, <strong><?=$usern?></strong></div>
