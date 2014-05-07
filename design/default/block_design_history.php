@@ -2,6 +2,7 @@
 $id = $_GET['id'];
 ?>
 <h3>History</h3>
+<hr>
 <h4>No. ID: <?=number_format($id,0,",","-")?></h4>
 <br />
 <table class="zebra-striped">

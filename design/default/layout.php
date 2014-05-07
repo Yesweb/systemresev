@@ -8,7 +8,7 @@ $usern = $_SESSION['username'];
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>System Reservasi</title>
+	<title>System Reservasi HPAM</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -78,7 +78,7 @@ function setCursor(el, st, end) {
 	</div>
 	
 	<div class="sixteen columns" style="background: #000000; margin-left: 0px; margin-right: 0px; width:100%;">
-		<h5 style="color: #ffffff;">Footer</h5>
+		<div class="footer">Sistem reservasi &copy; yesweb.co.id</div>
 	</div>
 </div>
 </body>
