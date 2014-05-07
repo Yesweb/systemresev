@@ -1,6 +1,9 @@
 <h3>Manage Group Menu</h3>
 <hr>
-<ul>
+<table class="zebra-striped">
+	<tr>
+		<th>Action</th><th>Menu</th>
+	</tr>
 <?php
 $group = $_GET['ig'];
 $qrygm = $db->Execute("
@@ -11,11 +14,13 @@ $qrygm = $db->Execute("
 	");
 while($data_qrygm = $qrygm->FetchRow()) {
 ?>
-	<li><?=$data_qrygm['title']?></li>
+	<tr>
+		<td>Delete</td><td><?=$data_qrygm['title']?></td>
+	</tr>
 <?php
 } //EOF while($data_qrygm = $qrygm->FetchRow())
 ?>
-</ul>
+</table>
 <form class="content" name="menuadd" action="index.php?view=menuadd" method="post">
 	<input type="hidden" name="idperm" value="<?=$group?>">
 	<select name="menu">
