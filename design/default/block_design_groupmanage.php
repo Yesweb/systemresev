@@ -7,7 +7,15 @@
 <?php
 $group = $_GET['ig'];
 $qrygm = $db->Execute("
-	SELECT * FROM `user_menu`
+	SELECT
+		`user_menu`.`id` AS groupid,
+		id_user_perm,
+		id_menu,
+		`menu`.`id` AS menuid,
+		orderby,
+		title,
+		url
+	FROM `user_menu`
 	LEFT JOIN `menu`
 	ON user_menu.id_menu=menu.id
 	WHERE id_user_perm=$group
@@ -15,7 +23,7 @@ $qrygm = $db->Execute("
 while($data_qrygm = $qrygm->FetchRow()) {
 ?>
 	<tr>
-		<td>Delete</td><td><?=$data_qrygm['title']?></td>
+		<td><a href="index.php?view=deletegroupmenu&id=<?=$data_qrygm['groupid']?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Delete</a></td><td><?=$data_qrygm['title']?></td>
 	</tr>
 <?php
 } //EOF while($data_qrygm = $qrygm->FetchRow())

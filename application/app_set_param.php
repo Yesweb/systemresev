@@ -25,4 +25,6 @@
 	$code108 = "108:Nomor ID berhasil di nonaktif."; //
 	
 	$code109 = "109:Nomor ID harus di isi."; //
+	
+	$code110 = "110:Menu berhasil di hapus."; //
 ?>

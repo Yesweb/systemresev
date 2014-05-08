@@ -84,6 +84,10 @@ switch($_GET['view']) {
 		include ("design/".$_CONFIG['templ']['main']."/block_design_groupmanage.php");
 	break;
 	
+	case "deletegroupmenu":
+		include ("design/".$_CONFIG['templ']['main']."/block_design_deletegroupmenu.php");
+	break;
+	
 	case "menuadd":
 		include ("design/".$_CONFIG['templ']['main']."/block_design_menuadd.php");
 	break;
